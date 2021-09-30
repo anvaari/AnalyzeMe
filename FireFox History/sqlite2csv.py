@@ -93,12 +93,13 @@ if __name__=='__main__':
         '--db-path',
         dest='db_path',
         type=str,
+        required=True,
         help='Path to places.sqlite')
     parser.add_argument(
         '--output-path',
         dest='output_path',
         type=str,
-        default=os.getcwd(),
+        default=script_path,
         help='Path to where you want csv files save')
     args=parser.parse_args()
     db_path=args.db_path
