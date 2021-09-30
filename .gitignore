@@ -1,0 +1,6 @@
+venv
+__pycache__
+FireFox\ History/**/*.csv
+FireFox\ History/favicons
+FireFox\ History/Data
+FireFox\ History/**/*.png
