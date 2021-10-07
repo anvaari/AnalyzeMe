@@ -2,7 +2,7 @@
 # Analyze FireFox History
 This is part of AnalyzeMe project and its aim is to analyze your Firefox history. In this version it create 2 plot and 1 CSV.
 Plots:
-- Sites with highest frecency (What is frecency? See [Read More](#Read\ More) section)
+- Sites with highest frecency (What is frecency? See [Read More](#https://github.com/anvaari/AnalyzeMe/tree/main/FireFox%20History#read-more) section)
 - Sites you visit most
 
 CSV:
@@ -10,7 +10,9 @@ CSV:
 
 ## How does it work?
 Firefox save your history in sqlite database. AnalyzeMe-Firefox get it as an input and make lot of plot and CSV from your browsing history :)
+
 AnalyzeMe-Firefox also works fine with persian language.
+
 Code is fully commented and you can learn more by reading source code.
 
 ## Usage
@@ -24,9 +26,9 @@ Install them using venv and pip :)
 6. Install dependecies : `pip install -r requirements.txt`
 
 ### Analyzing 
-`analyze.py ` uses `sqlite2csv.py` to convert sqlite tables to pandas.DataFrame. Both can use as an module or individually. Here I explaine usage in individual mode.
+`analyze.py` uses `sqlite2csv.py` to convert sqlite tables to pandas.DataFrame. Both can use as an module or individually. Here I explaine usage in individual mode.
 
-**analyze.py** : 
+[**analyze.py**](https://github.com/anvaari/AnalyzeMe/blob/main/FireFox%20History/analyze.py) : 
 - see `python analyze.py -h` 
 You can move your firefox history file (places.sqlite) in code path or you can specify path to that with `--db`.
 Default output folder is code path but you can specify that with `--output`.
@@ -35,7 +37,7 @@ Example:
 python analyze.py --db ~/Data/places.sqlite --output ./output
 ```
 
-**sqlite2csv.py** :
+[**sqlite2csv.py**](https://github.com/anvaari/AnalyzeMe/blob/main/FireFox%20History/sqlite2csv.py) :
 - see `python sqlite2.py -h`
 It export places, history_visit and origin tables from places.sqlite as csv
 You can move your firefox history file (places.sqlite) in code path or you can specify path to that with `--db`.
@@ -71,10 +73,12 @@ I use many open source project in AnalyzeMe-Firefox, many of them are so popular
 ## Read more
 Some resources which helped me :
 [Frecency in origins](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Frecency_algorithm)
-[Visit_Type in places](https://forensicswiki.xyz/wiki/index.php?title=Mozilla_Firefox_3_History_File_Format)
-https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Database
-https://wiki.mozilla.org/Browser_History
 
+[Visit_Type in places](https://forensicswiki.xyz/wiki/index.php?title=Mozilla_Firefox_3_History_File_Format)
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Database
+
+https://wiki.mozilla.org/Browser_History
 
 How to force matplotlib to save fig exact as it show : [here](https://kavigupta.org/2019/05/18/Setting-the-size-of-figures-in-matplotlib/)
 
