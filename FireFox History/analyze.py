@@ -380,7 +380,7 @@ def get_search_phrases(places,history_v,output_path,scrap_suggested=False):
 
 # Specify path where this code exist
 project_path=os.path.dirname(os.path.abspath(__file__))
-#%%
+
 if not os.path.isfile(os.path.join(project_path,'stopwords.dat')):
     raise Exception('Please download stopwords.dat from https://github.com/sobhe/hazm/blob/master/hazm/data/stopwords.dat  and copy it in project path.')
 
@@ -404,6 +404,9 @@ if __name__ =='__main__':
     db_path=args.db_path
     output_path=args.output_path
     
+    if not os.path.isfile(db_path):
+        raise Exception("\ndatabase path is not valud. Please provide valid address to your Firefox sqlite database")
+        
     places,history_v,origins=sqlite2df(db_path)
     show_most_frecency(origins,output_path)    
     show_most_visit(places,output_path)
