@@ -1,4 +1,8 @@
 # AnalyzeMe
+
+**Important:** It was hobby project and it doens't maintained any more. If you like working on it please let me know.
+
+
 I think privacy is matter. Nowdays we hear about how much big companies spend to access our private data and analyze them to know us more!
 
 Our browsing data (in web browsers, music apps, ...) contain much information about our personality, intrests and much more. **So why not to analyze them to know ourselves more?**
